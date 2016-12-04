@@ -1,0 +1,57 @@
+<head><!--head-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+    
+    <title>{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }} - {{ site.description }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+
+    <meta property="og:type" content="article" />
+	<meta property="og:title" content="{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:image" content= "{%if page.image %}{{ site.url }}/{{ page.image }}{% else %}{{ site.url }}/{{ site.logo-square }}{% endif %}" />
+	<meta property="og:site_name" content="{{ site.title }}" />
+
+	<meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:title" content="{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }}{% endif %}" />
+	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+	<meta name="twitter:site" content="@{{ site.twitusername }}" />
+	<meta name="twitter:creator" content="@{{ site.twitusername }}" />
+	<meta name="twitter:card" content="summary" />
+
+	<script type="application/ld+json">
+	  {
+	    "@context": "http://schema.org",
+	    "@type": "Ecommerce",
+	    "name": "{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }} - {{ site.description }}{% endif %}",
+	    "headline": "{%if page.title %}{{ page.title }} - {{ site.title }} {% else %}{{ site.title }} - {{ site.description }}{% endif %}",
+	    {%if page.image %}"image": "{{site.url}}/{{ page.image }}",{% else %}"image": "{{site.url}}/{{ site.logo-square }}",{% endif %}
+	    "description": "{% if page.description %}{{ page.description}}{% else %}{{ site.description}}{% endif %}",
+	    "logo": "{{ site.url }}/{{ site.logo-square }}",
+	    "url": "{{ site.url }}{{ page.url }}"
+	  }
+	</script>
+
+
+    <link rel="alternate" href="{{ site.url }}" hreflang="x-default" />
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+	<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/prettyPhoto.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/animate.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/responsive.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/price-range.css" | prepend: site.baseurl }}">
+	<link rel="Shortcut Icon" href="{{ site.icon }}" type="image/x-icon" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/analytics.js"></script>
+
+</head><!--/head-->
