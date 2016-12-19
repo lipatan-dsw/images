@@ -12,7 +12,6 @@ description: > # this means to ignore newlines until "baseurl:"
   Toko online murah dan terpercaya.
   Toko online kebutuhan sehari-hari Anda.
 url: "https://www.lipatan.com" # the base hostname & protocol for your site
-baseurl: "/images" # the subpath of your site, e.g. /blog
 logo-square: img/lipatan-square.png
 logo-rectangle: img/lipatan-rectangle.png
 icon: img/lipatan-square-small.png
