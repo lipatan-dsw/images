@@ -39,7 +39,6 @@ google_cse: 004200709654862820302:owlayxkjfs4
 # Build settings
 markdown: kramdown
 permalink: /:title
-#baseurl: "" # the subpath of your site, e.g. /blog
 paginate: 10
 paginate_path: "/page:num"
 gems:
